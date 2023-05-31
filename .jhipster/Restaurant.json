@@ -1,0 +1,45 @@
+{
+  "applications": ["rezit"],
+  "changelogDate": "20230531093306",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "restaurant",
+  "fields": [
+    {
+      "fieldName": "restaurantName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Restaurant",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "adress",
+      "ownerSide": true,
+      "relationshipName": "restaurantName",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "schedule",
+      "ownerSide": true,
+      "relationshipName": "restaurantName",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "reservation",
+      "otherEntityRelationshipName": "restaurant",
+      "relationshipName": "restaurantName",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "menu",
+      "otherEntityRelationshipName": "restaurant",
+      "relationshipName": "restaurantName",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

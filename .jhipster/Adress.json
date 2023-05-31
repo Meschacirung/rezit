@@ -1,0 +1,35 @@
+{
+  "applications": ["rezit"],
+  "changelogDate": "20230531093906",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "adress",
+  "fields": [
+    {
+      "fieldName": "number",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "avenue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "neibordhood",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Adress",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "adress",
+      "relationshipName": "number",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

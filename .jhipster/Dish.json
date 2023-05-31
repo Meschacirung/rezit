@@ -1,0 +1,51 @@
+{
+  "applications": ["rezit"],
+  "changelogDate": "20230531093606",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "dish",
+  "fields": [
+    {
+      "fieldName": "dishName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dishThumbnail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dishCategory",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dishPrice",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "isVegan",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isFeatured",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "dishIngredients",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Dish",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "menu",
+      "otherEntityRelationshipName": "menuName",
+      "relationshipName": "menu",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

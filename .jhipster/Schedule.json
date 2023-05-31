@@ -1,0 +1,27 @@
+{
+  "applications": ["rezit"],
+  "changelogDate": "20230531094006",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "schedule",
+  "fields": [
+    {
+      "fieldName": "scheduleId",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Schedule",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "day",
+      "otherEntityRelationshipName": "schedule",
+      "relationshipName": "days",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

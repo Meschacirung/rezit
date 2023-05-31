@@ -1,0 +1,39 @@
+{
+  "applications": ["rezit"],
+  "changelogDate": "20230531093206",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "customer",
+  "fields": [
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Customer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "reservation",
+      "ownerSide": true,
+      "relationshipName": "customerName",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "feedback",
+      "ownerSide": true,
+      "relationshipName": "customerName",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "adress",
+      "otherEntityRelationshipName": "number",
+      "relationshipName": "adress",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

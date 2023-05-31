@@ -1,0 +1,96 @@
+application {
+  config {
+    baseName rezit
+    buildTool maven
+    databaseType sql
+    prodDatabaseType postgresql
+    authenticationType session
+    websocket spring-websocket
+    clientFramework	vue
+  }
+  entities *
+  dto * with mapstruct
+}
+
+entity Customer {
+	customerName String,
+}
+
+entity Restaurant {
+	restaurantName String,
+}
+
+entity Reservation {
+	reservationId Integer,
+	customerName String,
+	restaurantName String,
+    restaurantTable String,
+    reservationDate LocalDate,
+    tableSize Integer
+}
+
+entity Menu {
+	menuName String,
+}
+
+entity Dish {
+    dishName String
+    dishThumbnail String
+    dishCategory String
+    dishPrice Double
+    isVegan Boolean
+    isFeatured Boolean
+    dishIngredients String
+}
+
+entity Notification {
+	from String
+	date LocalDate
+    hour LocalDate 
+    content String
+}
+
+entity Feedback {
+	customerId Integer
+	restaurantId Integer,
+    feedbackNote Integer,
+    feedbackDescription String
+}
+
+entity Adress {
+    number Integer
+	avenue String
+    neibordhood String
+}
+
+entity Schedule{
+	scheduleId Integer
+}
+
+entity Day{
+	day String,
+	openAt String,
+    closesAt String
+}
+
+relationship OneToOne{
+	Customer{customerName} to Reservation
+	Customer{customerName} to Feedback
+}
+relationship OneToOne{
+	Restaurant{restaurantName} to Adress
+	Restaurant {restaurantName} to Schedule
+}
+relationship OneToMany{
+	Restaurant{restaurantName} to Reservation
+	Restaurant{restaurantName} to Menu 
+}
+relationship OneToMany{
+	Menu{menuName} to Dish
+}
+relationship OneToMany{
+	Schedule {days} to Day
+}
+relationship OneToMany {
+	Adress{number} to Customer
+}

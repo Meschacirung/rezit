@@ -1,0 +1,35 @@
+{
+  "applications": ["rezit"],
+  "changelogDate": "20230531094106",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "day",
+  "fields": [
+    {
+      "fieldName": "day",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "openAt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "closesAt",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Day",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "schedule",
+      "otherEntityRelationshipName": "days",
+      "relationshipName": "schedule",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

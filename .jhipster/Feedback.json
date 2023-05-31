@@ -1,0 +1,32 @@
+{
+  "applications": ["rezit"],
+  "changelogDate": "20230531093806",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "feedback",
+  "fields": [
+    {
+      "fieldName": "customerId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "restaurantId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "feedbackNote",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "feedbackDescription",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Feedback",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

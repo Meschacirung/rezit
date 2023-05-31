@@ -1,0 +1,47 @@
+{
+  "applications": ["rezit"],
+  "changelogDate": "20230531093406",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "reservation",
+  "fields": [
+    {
+      "fieldName": "reservationId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "restaurantName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "restaurantTable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reservationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "tableSize",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Reservation",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "restaurant",
+      "otherEntityRelationshipName": "restaurantName",
+      "relationshipName": "restaurant",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
